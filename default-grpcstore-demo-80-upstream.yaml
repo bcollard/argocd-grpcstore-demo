@@ -1,0 +1,21 @@
+apiVersion: gloo.solo.io/v1
+kind: Upstream
+metadata:
+  labels:
+    discovered_by: kubernetesplugin
+  name: default-grpcstore-demo-80
+  namespace: gloo-system
+  resourceVersion: "7728"
+  uid: 795946dc-e60f-44e9-80c5-a925b93522e8
+spec:
+  discoveryMetadata:
+    labels:
+      app: grpcstore-demo
+      app.kubernetes.io/instance: grpcstore
+      discovery.solo.io/function_discovery: enabled
+  kube:
+    selector:
+      app: grpcstore-demo
+    serviceName: grpcstore-demo
+    serviceNamespace: default
+    servicePort: 80
