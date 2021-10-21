@@ -2,15 +2,10 @@ apiVersion: gloo.solo.io/v1
 kind: Upstream
 metadata:
   labels:
-    app.kubernetes.io/instance: grpcstore
     discovered_by: kubernetesplugin
   name: default-grpcstore-demo-80
   namespace: gloo-system
 spec:
-  discoveryMetadata:
-    labels:
-      app: grpcstore-demo
-      app.kubernetes.io/instance: grpcstore
   kube:
     selector:
       app: grpcstore-demo
