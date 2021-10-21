@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpcstore-demo
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: grpcstore-demo
+  template:
+    metadata:
+      labels:
+        app: grpcstore-demo
+    spec:
+      containers:
+      - image: docker.io/soloio/grpcstore-demo
+        imagePullPolicy: Always
+        name: grpcstore-demo
+        
