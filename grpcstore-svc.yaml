@@ -3,7 +3,6 @@ kind: Service
 metadata:
   labels:
     app: grpcstore-demo
-    discovery.solo.io/function_discovery: enabled
   name: grpcstore-demo
   namespace: default
 spec:

@@ -12,7 +12,6 @@ spec:
     labels:
       app: grpcstore-demo
       app.kubernetes.io/instance: grpcstore
-      discovery.solo.io/function_discovery: enabled
   kube:
     selector:
       app: grpcstore-demo
