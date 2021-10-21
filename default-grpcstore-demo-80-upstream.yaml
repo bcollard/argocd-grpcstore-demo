@@ -4,7 +4,7 @@ metadata:
   labels:
     discovery.solo.io/function_discovery: enabled
   name: default-grpcstore-demo-80
-  namespace: gloo-system
+  namespace: default
 spec:
   kube:
     selector:
